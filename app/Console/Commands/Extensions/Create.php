@@ -32,8 +32,8 @@ class Create extends Command implements PromptsForMissingInput
     {
         $name = $this->argument('name');
         $type = $this->argument('type');
-        if (!in_array($type, ['server', 'gateway', 'event'])) {
-            $this->error('Invalid extension type. Valid types are: server, gateway, event');
+        if (!in_array($type, ['server', 'gateway', 'event', 'registrar'])) {
+            $this->error('Invalid extension type. Valid types are: server, gateway, event, registrar');
             return;
         }
         // Read stub file contents
